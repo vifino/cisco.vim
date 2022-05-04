@@ -21,10 +21,10 @@ syn keyword ciscoKeyword    address network route neighbor redistribute default-
 syn keyword ciscoKeyword    version class switchport clock name minimum maximum level size
 syn keyword ciscoKeyword    established source destination allowed
 syn keyword ciscoKeyword    timeout threshold frequency keepalive average weights mtu tunnel
-syn keyword ciscoKeyword    privilege secret
+syn keyword ciscoKeyword    privilege secret transceiver platform
 syn match   ciscoKeyword    /timestamps\?/
 
-syn keyword ciscoProtocol   ipv4 ipv6 tcp udp icmp echo
+syn keyword ciscoProtocol   ip ipv4 ipv6 tcp udp icmp echo
 syn keyword ciscoProtocol   http https www dhcp domain nameserver ssh telnet ftp ftp-data
 syn keyword ciscoProtocol   ntp snmp snmptrap syslog
 syn keyword ciscoProtocol   smtp pop2 pop3
@@ -49,7 +49,7 @@ syn keyword ciscoFunction   passive-interface distribute-list permit subnet-zero
 syn match   ciscoFunction   /channel\-\(group\|protocol\)/
 
 syn match   ciscoComment    /!.*$/
-syn match   ciscoComment    /no\s.*$/
+syn match   ciscoComment    /^\s*no\s.*$/
 syn match   ciscoComment    /description.*$/
 syn match   ciscoComment    /remark.*$/
 syn match   ciscoComment    /\s*#.*$/
@@ -61,7 +61,7 @@ syn match   ciscoInterface  /^ip\s\(sla\|vrf\)\s.*\d$/
 syn match   ciscoInterface  /^monitor\ssession\s\d\+$/
 syn match   ciscoInterface  /^\(class\|policy\|route\)\-map\s.*$/
 syn match   ciscoInterface  /^ip\saccess\-list\s\(standard\|extended\)\s.*$/
-syn match   ciscoInterface  /^vrf\s\(definition\|context\)\s.*$/
+syn match   ciscoInterface  /^vrf\s\(definition\|context\|instance\)\s.*$/
 syn match   ciscoInterface  /^address\-family\sipv.*$/
 
 
